@@ -2,15 +2,16 @@
     --footer-height: 1.5em;
 }
   
-
+html {
+    overflow: hidden;
+}
 html,body {
     height: 100%;
 }
 
 body {
-    background-image: radial-gradient(circle at center,rgb(36, 36, 36) , rgb(27, 27, 27));
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 h1 {
     color:white;
@@ -58,16 +59,18 @@ h1 {
     margin-bottom: 1em;
     margin-top: 4em;
     font-size: 0.8em;
-    height: var(--footer-height);
 }
 
 .wrapper {
     min-height: 100%;
-    margin-bottom: calc(var(--footer-height) * -1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    background-image: radial-gradient(circle at center,rgb(36, 36, 36) , rgb(27, 27, 27));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 @media (max-width: 768px) { 
