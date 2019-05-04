@@ -17,7 +17,7 @@ h1 {
     color:white;
     text-align: center;
     padding: 1em;
-    font-size: 2.5em;
+    font-size: 2em;
     text-shadow: 8px 8px 10px #0000001a;
     font-family: 'Nunito';
     
@@ -42,16 +42,41 @@ h1 {
 .social-button {
     display: inline-block;
     transition: all .2s ease-in-out;
-    margin: 0.2em;
+    margin: 0.35em;
     vertical-align: middle;
     font-size: 5em;
-    text-shadow: 0 0 0.3em #000000;
+    box-shadow: 0px 0px 0.2em 0.05em rgba(0, 0, 0, 0.404);
+    background-color: red;
+    padding: 0.4em;
+    border-radius: 50%;
+    line-height: 1em;
 }
 
 .social-button:hover {
     transform: scale(0.9);
     opacity: 0.8;
-    text-shadow: 0 0 0.15em #000000c2;
+    box-shadow: 0px 0px 0.1em 0.05em rgba(0, 0, 0, 0.199);
+}
+.social-button.linkedin {
+    background-color: #0077B5;
+}
+.social-button.github {
+    background-color: #6e5494;
+}
+.social-button.instagram {
+    background-color: #f56040;
+}
+.social-button.facebook {
+    background-color: #3C5A99;
+}
+.social-button.twitter {
+    background-color: #1DA1F2;
+}
+.social-button.email {
+    background-color: rgb(35, 229, 255);
+}
+.social-button.cv {
+    background-color: rgb(187, 177, 43);
 }
 
 .footer {
@@ -95,7 +120,9 @@ h1 {
 
     .social-button {
         display: block;
-        margin: 0em;
+        margin: 0.5em auto;
         font-size: 6em;
+        width: 1.8em;
+        height: 1.8em;
     }
 }
