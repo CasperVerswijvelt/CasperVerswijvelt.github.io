@@ -49,6 +49,7 @@ h1 {
     padding: 0.4em;
     border-radius: 50%;
     line-height: 1em;
+    z-index: 500;
 }
 
 .social-button:hover {
@@ -78,6 +79,27 @@ h1 {
     background-color: rgb(187, 177, 43);
 }
 
+.social-button-wrapper{
+    display: inline-block;
+}
+
+.social-button + span {
+    transition: all .2s ease-in-out;
+    color:white; 
+    display: block;
+    margin-top: -2em;
+    font-weight: 500;
+    z-index: -1000;
+
+    opacity: 0;
+    transform: translateY(-1);
+}
+
+.social-button:hover + span {
+    opacity: 1;
+    transform: translateY(0.5em);
+}
+
 .footer {
     width: 100%;
     color: rgb(151, 151, 151);
@@ -87,6 +109,10 @@ h1 {
     font-size: 0.8em;
 }
 
+.footer a {
+    color: rgb(151, 151, 151);
+}
+
 .wrapper {
     min-height: 100%;
     display: flex;
@@ -94,9 +120,13 @@ h1 {
     align-items: center;
     justify-content: center;
 
-    background-image: radial-gradient(circle at center,rgb(36, 36, 36) , rgb(27, 27, 27));
+    background: radial-gradient(circle at center,rgb(36, 36, 36) , rgb(27, 27, 27));
     background-repeat: no-repeat;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 @media (max-width: 768px) { 
@@ -121,11 +151,24 @@ h1 {
         font-size: 2.5em;
     }
 
-    .social-button {
+    .social-button-wrapper {
         display: block;
+    }
+
+    .social-button {
         margin: 0.5em auto;
         font-size: 6em;
         width: 1.8em;
         height: 1.8em;
     }
 }
+
+@media (hover: none) { 
+    /* We always want to show social-button labels when hovering is not supported*/
+    .social-button + span {
+        margin-top: -1.5em;
+        margin-bottom: 0.2em;
+        opacity: 1;
+        transform: translateY(0.7em);
+    }
+ }
