@@ -125,9 +125,10 @@ h1 {
     min-height: 100%;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at center, rgb(36, 36, 36), rgb(27, 27, 27));
-    background-repeat: no-repeat;
+    background: radial-gradient(circle at center, rgb(36, 36, 36), rgb(27, 27, 27)) repeat center center fixed;
     background-size: cover;
+    height: 100%;
+    overflow: auto;
 }
 
 .content {
