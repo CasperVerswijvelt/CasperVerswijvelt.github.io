@@ -1,11 +1,13 @@
 :root {
     --footer-height: 1.5em;
 }
-  
+
 html {
     overflow: hidden;
 }
-html,body {
+
+html,
+body {
     height: 100%;
 }
 
@@ -13,15 +15,16 @@ body {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
+
 h1 {
-    color:white;
+    color: white;
     text-align: center;
     padding: 1em;
     font-size: 2em;
     text-shadow: 8px 8px 10px #0000001a;
     font-family: 'Nunito';
-    
 }
+
 .white-logo {
     color: white;
     width: 1em;
@@ -32,7 +35,6 @@ h1 {
     overflow: hidden;
     text-align: center;
     width: 100%;
-    height: 100%;
     justify-content: center;
     align-self: center;
     padding-bottom: 2em;
@@ -57,45 +59,51 @@ h1 {
     opacity: 0.8;
     box-shadow: 0px 0px 0.1em 0.05em rgba(0, 0, 0, 0.199);
 }
+
 .social-button.linkedin {
     background-color: #0077B5;
 }
+
 .social-button.github {
     background-color: #6e5494;
 }
+
 .social-button.instagram {
     background-color: #f56040;
 }
+
 .social-button.facebook {
     background-color: #3C5A99;
 }
+
 .social-button.twitter {
     background-color: #1DA1F2;
 }
+
 .social-button.email {
     background-color: rgb(35, 229, 255);
 }
+
 .social-button.cv {
     background-color: rgb(187, 177, 43);
 }
 
-.social-button-wrapper{
+.social-button-wrapper {
     display: inline-block;
 }
 
-.social-button + span {
+.social-button+span {
     transition: all .2s ease-in-out;
-    color:white; 
+    color: white;
     display: block;
     margin-top: -2em;
     font-weight: 500;
     z-index: -1000;
-
     opacity: 0;
     transform: translateY(-1);
 }
 
-.social-button:hover + span {
+.social-button:hover+span {
     opacity: 1;
     transform: translateY(0.5em);
 }
@@ -104,9 +112,9 @@ h1 {
     width: 100%;
     color: rgb(151, 151, 151);
     text-align: center;
-    margin-bottom: 1em;
-    margin-top: 4em;
     font-size: 0.8em;
+    margin-top: -2em;
+    height: 2em;
 }
 
 .footer a {
@@ -115,46 +123,44 @@ h1 {
 
 .wrapper {
     min-height: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    background: radial-gradient(circle at center,rgb(36, 36, 36) , rgb(27, 27, 27));
+    background: radial-gradient(circle at center, rgb(36, 36, 36), rgb(27, 27, 27));
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
-@media (max-width: 768px) { 
+.content {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 4em;
+}
+
+@media (max-width: 768px) {
     h1 {
         font-size: 2.5em;
     }
-
     .social-button {
         font-size: 4em;
     }
-
-    .footer {
-        margin-top: 1em;
+    .content {
+        padding-bottom: 3em;
     }
-
     .desktop-break {
         display: none;
     }
 }
-@media (max-width: 576px) { 
+
+@media (max-width: 576px) {
     h1 {
         font-size: 2.5em;
     }
-
     .social-button-wrapper {
         display: block;
     }
-
     .social-button {
         margin: 0.5em auto;
         font-size: 6em;
@@ -163,12 +169,12 @@ h1 {
     }
 }
 
-@media (hover: none) { 
+@media (any-hover: none) {
     /* We always want to show social-button labels when hovering is not supported*/
-    .social-button + span {
+    .social-button+span {
         margin-top: -1.5em;
         margin-bottom: 0.2em;
         opacity: 1;
         transform: translateY(0.7em);
     }
- }
+}
