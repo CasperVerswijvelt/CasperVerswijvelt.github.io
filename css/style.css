@@ -120,9 +120,13 @@ h1 {
     align-items: center;
     justify-content: center;
 
-    background-image: radial-gradient(circle at center,rgb(36, 36, 36) , rgb(27, 27, 27));
+    background: radial-gradient(circle at center,rgb(36, 36, 36) , rgb(27, 27, 27));
     background-repeat: no-repeat;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 @media (max-width: 768px) { 
