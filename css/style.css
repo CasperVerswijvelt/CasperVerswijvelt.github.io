@@ -91,6 +91,22 @@ a {
     display: block;
 }
 
+.social-button-text:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -7px;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom left;
+    transition: width 0.25s ease-out;
+}
+
+.social-button-wrapper:hover .social-button-text:after {
+    width: 100%;
+}
+
 .underline {
     text-decoration: underline;
 }
@@ -98,6 +114,7 @@ a {
 .social-button-text {
     color: white;
     text-decoration: none;
+    position: relative;
 }
 
 .social-button-icon {
