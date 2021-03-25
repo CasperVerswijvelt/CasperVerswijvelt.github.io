@@ -1,5 +1,18 @@
-html {
-    overflow: hidden;
+:root {
+    --theme-transition-duration: 0.3s;
+    --background-color: rgb(36, 36, 36);
+    --background-color-secondary: rgb(29, 29, 29);
+    --primary-color: rgb(255, 255, 255);
+    --subtitle-color: rgb(210 210 210);
+    --table-background-color: rgb(25 24 24);
+}
+
+[data-theme="light"] {
+    --background-color: rgb(230, 230, 230);
+    --background-color-secondary: rgb(216 216 216);
+    --primary-color: black;
+    --subtitle-color: rgb(46, 46, 46);
+    --table-background-color: white;
 }
 
 html,
@@ -21,21 +34,20 @@ body {
     min-height: 100%;
     align-items: center;
     justify-content: center;
-    background: rgb(36, 36, 36);
+    background-color: var(--background-color);
+    transition: background-color var(--theme-transition-duration);
     background-size: cover;
     height: 100%;
     overflow: auto;
 }
 
 h1 {
-    color: white;
     font-size: 3em;
-    text-shadow: 8px 8px 10px #0000001a;
     padding-bottom: 10px;
 }
 
 h2 {
-    color: rgba(255, 255, 255, 0.726);
+    opacity: .7;
 }
 
 a {
@@ -53,13 +65,15 @@ a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: #0000002d;
+    background-color: var(--background-color-secondary);
     flex: 1 1 80%;
     flex-direction: column;
     justify-content: center;
     align-items: start;
     padding-left: 8%;
     padding-right: 10px;
+    color: var(--primary-color);
+    transition: color var(--theme-transition-duration), background-color var(--theme-transition-duration);
 }
 
 .socials {
@@ -80,12 +94,14 @@ a {
 }
 
 .white-logo {
-    color: white;
+    color: var(--primary-color);;
+    transition: color var(--theme-transition-duration);
     width: 1em;
 }
 
 .social-button-wrapper {
-    fill: white;
+    fill: var(--primary-color);
+    transition: fill var(--theme-transition-duration);
     font-size: 1.5em;
     padding: .5em;
     display: block;
@@ -100,7 +116,7 @@ a {
     left: 0;
     background-color: #ffffff;
     transform-origin: bottom left;
-    transition: width 0.25s ease-out;
+    transition: color var(--theme-transition-duration), width 0.25s ease-out;
 }
 
 .social-button-wrapper:hover .social-button-text:after {
@@ -112,13 +128,43 @@ a {
 }
 
 .social-button-text {
-    color: white;
+    color: var(--primary-color);;
+    transition: color var(--theme-transition-duration);
     text-decoration: none;
     position: relative;
 }
 
 .social-button-icon {
     padding-right: 4px;
+}
+
+.dark-toggle {
+    width: 37px;
+    height: 37px;
+    position: relative;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity .2s;
+    user-select: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.dark-toggle svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+
+    fill: var(--primary-color);
+    transition: fill var(--theme-transition-duration);
+}
+
+.dark-toggle:hover {
+    opacity: 0.85;
 }
 
 footer {
