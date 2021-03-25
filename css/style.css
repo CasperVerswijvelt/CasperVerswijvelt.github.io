@@ -3,16 +3,12 @@
     --background-color: rgb(36, 36, 36);
     --background-color-secondary: rgb(29, 29, 29);
     --primary-color: rgb(255, 255, 255);
-    --subtitle-color: rgb(210 210 210);
-    --table-background-color: rgb(25 24 24);
 }
 
 [data-theme="light"] {
     --background-color: rgb(230, 230, 230);
     --background-color-secondary: rgb(216 216 216);
-    --primary-color: black;
-    --subtitle-color: rgb(46, 46, 46);
-    --table-background-color: white;
+    --primary-color: rgb(10, 10, 10);
 }
 
 html,
@@ -114,7 +110,7 @@ a {
     height: 3px;
     bottom: -7px;
     left: 0;
-    background-color: #ffffff;
+    background-color: var(--primary-color);
     transform-origin: bottom left;
     transition: color var(--theme-transition-duration), width 0.25s ease-out;
 }
@@ -128,7 +124,7 @@ a {
 }
 
 .social-button-text {
-    color: var(--primary-color);;
+    color: var(--primary-color);
     transition: color var(--theme-transition-duration);
     text-decoration: none;
     position: relative;
