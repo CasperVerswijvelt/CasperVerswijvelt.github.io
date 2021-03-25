@@ -1,4 +1,6 @@
 document.getElementById("year").innerHTML = new Date().getFullYear();
+const themePref = localStorage.getItem('theme');
+if (themePref) toggleDarkMode(themePref === 'dark');
 
 function toggleDarkMode(force) {
 
