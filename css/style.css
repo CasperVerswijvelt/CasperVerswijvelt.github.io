@@ -55,6 +55,7 @@ a {
     display: flex;
     height: 100%;
     overflow-y: auto;
+    flex-direction: row-reverse;
 }
 
 .info {
@@ -128,6 +129,10 @@ a {
     transition: color var(--theme-transition-duration);
     text-decoration: none;
     position: relative;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0;
+    font-weight: normal;
 }
 
 .social-button-icon {
@@ -185,7 +190,7 @@ footer a {
 
 @media (max-width: 780px) {
     .content {
-        flex-direction: column-reverse;
+        flex-direction: column;
         height: initial;
         min-height: 100%;
         margin-bottom: -24pxem;
