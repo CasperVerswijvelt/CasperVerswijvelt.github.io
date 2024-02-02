@@ -141,14 +141,14 @@ header a {
   margin-bottom: 0.3em;
 }
 
-.skills {
+.masonry {
   display: flex;
   flex-flow: wrap;
   margin: 0.7em 0;
+  justify-content: space-between;
 }
 
-.skills div {
-  flex-basis: 50%;
+.masonry div {
   padding: 0.5em 0.5em 0.5em 0;
 }
 
@@ -157,12 +157,21 @@ header a {
 }
 
 .project {
-  margin: 0.5em 0;
+  margin: 0.5em 0 1em;
 }
 
 .project .project-title {
   font-weight: bold;
   margin-bottom: 0.5em;
+}
+
+.project .links {
+  margin-top: 0.5em;
+}
+
+.projects a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.45);
 }
 
 /* util */
