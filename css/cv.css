@@ -1,17 +1,17 @@
 @font-face {
   font-family: "San Francisco";
   font-weight: 100;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-light-webfont.woff");
+  src: url("/webfonts/sanfranciscodisplay-light-webfont.woff");
 }
 @font-face {
   font-family: "San Francisco";
   font-weight: 400;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  src: url("/webfonts/sanfranciscodisplay-regular-webfont.woff");
 }
 @font-face {
   font-family: "San Francisco";
   font-weight: 700;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+  src: url("/webfonts/sanfranciscodisplay-bold-webfont.woff");
 }
 * {
   box-sizing: border-box;
