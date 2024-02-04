@@ -1,17 +1,17 @@
 @font-face {
   font-family: "San Francisco";
   font-weight: 100;
-  src: url("/webfonts/sanfranciscodisplay-light-webfont.woff");
+  src: url("/fonts/sanfranciscodisplay-light-webfont.woff");
 }
 @font-face {
   font-family: "San Francisco";
   font-weight: 400;
-  src: url("/webfonts/sanfranciscodisplay-regular-webfont.woff");
+  src: url("/fonts/sanfranciscodisplay-regular-webfont.woff");
 }
 @font-face {
   font-family: "San Francisco";
   font-weight: 700;
-  src: url("/webfonts/sanfranciscodisplay-bold-webfont.woff");
+  src: url("/fonts/sanfranciscodisplay-bold-webfont.woff");
 }
 * {
   box-sizing: border-box;
@@ -48,7 +48,7 @@ header,
 }
 
 header {
-  background: linear-gradient(340deg, #373d48, #131414);
+  background: linear-gradient(340deg, #161616, #141414);
   width: 100%;
   display: flex;
   align-items: center;
@@ -75,6 +75,7 @@ header .picture {
   height: 175px;
   object-fit: cover;
   border-radius: 50%;
+  transform: rotate(14deg);
   box-shadow: 0px 0px 10px 5px #00000033;
 }
 
